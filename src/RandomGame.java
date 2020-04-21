@@ -23,11 +23,12 @@ public class RandomGame implements ActionListener {
         jtf.setActionCommand("Start");
 
         jb = new JButton("To begin");
+        jb.setPreferredSize(new Dimension(402,25));
 
         jtf.addActionListener(this);
         jb.addActionListener(this);
 
-        jlRes = new JLabel("");
+        jlRes = new JLabel("And it's: ");
 
         jf.add(jl);
         jf.add(jtf);
@@ -42,9 +43,7 @@ public class RandomGame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        String[] arr = jtf.getText().split(" ");
-        Random r = new Random();
-        String res = arr[r.nextInt(arr.length)];
-        jlRes.setText("And it's: " + res);
+        jlRes.setText("And it's: " +
+                jtf.getText().split(" ")[new Random().nextInt(jtf.getText().split(" ").length)]);
     }
 }
