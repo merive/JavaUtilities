@@ -1,6 +1,6 @@
-# RandomGame
-## _A simple utility for choosing a game_
+# JavaUtilities
+### _Repository with various utilities_
 
-### If you do not know which game to choose, use this utility, it will solve your problem.
-### It is written in Java, but install it before you begin.
-### The project will be exposed and improved, both with functional and visual components.
+In this repository, various utilities will be added for any occasion.
+Over time, there will be more of them and then their list will appear.
+If you have any suggestions, write me on [Twitter](https://twitter.com/merive_)
