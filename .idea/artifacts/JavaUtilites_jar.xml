@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="JavaUtilites:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaUtilites_jar</output-path>
+    <root id="archive" name="JavaUtilites.jar">
+      <element id="module-output" name="JavaUtilites" />
+    </root>
+  </artifact>
+</component>
