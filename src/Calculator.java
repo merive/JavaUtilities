@@ -76,7 +76,7 @@ public class Calculator implements ActionListener {
         bMinus.setBounds(190, 130, 50, 50);
         bMinus.setPreferredSize(new Dimension(50, 50));
 
-        bMulti = new JButton("x");
+        bMulti = new JButton("*");
         bMulti.setBounds(190, 77, 50, 50);
         bMulti.setPreferredSize(new Dimension(50, 50));
 
@@ -182,9 +182,9 @@ public class Calculator implements ActionListener {
                     getRes();
                 }
                 break;
-            case "x":
+            case "*":
                 if (OPERATOR.equals("null")) {
-                    jlRes.setText(jlRes.getText() + "x");
+                    jlRes.setText(jlRes.getText() + "*");
                     OPERATOR = ae.getActionCommand();
                 } else {
                     getRes();
@@ -223,7 +223,7 @@ public class Calculator implements ActionListener {
                 jlRes.setText(res);
                 OPERATOR = "null";
                 break;
-            case "x":
+            case "*":
                 res = Integer.toString(num1 * num2);
                 jlRes.setText(res);
                 OPERATOR = "null";
@@ -235,7 +235,7 @@ public class Calculator implements ActionListener {
                     OPERATOR = "null";
                     break;
                 } catch (ArithmeticException exc) {
-                    jlRes.setText("0");
+                    jlRes.setText("1");
                     OPERATOR = "null";
                     break;
                 }
