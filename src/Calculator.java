@@ -12,9 +12,7 @@ public class Calculator implements ActionListener {
     int num1, num2;
     String res;
 
-    /**
-     * @wbp.parser.entryPoint
-     */
+
     Calculator() {
         jf = new JFrame("Calculator");
         jf.setSize(257, 330);
