@@ -233,7 +233,7 @@ public class Calculator implements ActionListener {
                     OPERATOR = "null";
                     break;
                 } catch (ArithmeticException exc) {
-                    jlRes.setText("1");
+                    jlRes.setText("");
                     OPERATOR = "null";
                     break;
                 }
