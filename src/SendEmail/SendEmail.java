@@ -17,17 +17,13 @@ class SendEmail {
         props.put("mail.smtp.port", "587");
         Session session = Session.getInstance(props, null);
 
-        try {
-            MimeMessage msg = new MimeMessage(session);
-            msg.setFrom(from);
-            msg.setRecipients(Message.RecipientType.TO,
-                    to);
-            msg.setSubject(title);
-            msg.setSentDate(new Date());
-            msg.setText(mes);
-            Transport.send(msg, from, password);
-        } catch (MessagingException mex) {
-            throw mex;
-        }
+        MimeMessage msg = new MimeMessage(session);
+        msg.setFrom(from);
+        msg.setRecipients(Message.RecipientType.TO,
+                to);
+        msg.setSubject(title);
+        msg.setSentDate(new Date());
+        msg.setText(mes);
+        Transport.send(msg, from, password);
     }
 }
