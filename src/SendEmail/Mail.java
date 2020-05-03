@@ -1,12 +1,17 @@
+package SendEmail;
+
+import javax.mail.MessagingException;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Mail {
+public class Mail implements ActionListener {
 
     JFrame jf;
-    JTextField emailTF, titleTF, fromTF;
-    JPasswordField passwordField;
-    JLabel email, fromLb, YouPassword, mes, title, res;
+    JTextField emailTF, titleTF, toTF;
+    JPasswordField passwordTF;
+    JLabel email, toLb, YouPassword, mes, title, res;
     JButton send;
     JTextPane message;
 
@@ -32,20 +37,20 @@ public class Mail {
         YouPassword.setBounds(27, 92, 119, 23);
         jf.getContentPane().add(YouPassword);
 
-        passwordField = new JPasswordField();
-        passwordField.setBounds(27, 117, 119, 23);
-        jf.getContentPane().add(passwordField);
+        passwordTF = new JPasswordField();
+        passwordTF.setBounds(27, 117, 119, 23);
+        jf.getContentPane().add(passwordTF);
 
-        fromLb = new JLabel("From:");
-        fromLb.setFont(new Font("Verdana", Font.PLAIN, 12));
-        fromLb.setBounds(467, 29, 119, 16);
-        jf.getContentPane().add(fromLb);
+        toLb = new JLabel("To:");
+        toLb.setFont(new Font("Verdana", Font.PLAIN, 12));
+        toLb.setBounds(467, 29, 119, 16);
+        jf.getContentPane().add(toLb);
 
-        fromTF = new JTextField();
-        fromTF.setFont(new Font("Verdana", Font.PLAIN, 12));
-        fromTF.setColumns(10);
-        fromTF.setBounds(467, 51, 119, 23);
-        jf.getContentPane().add(fromTF);
+        toTF = new JTextField();
+        toTF.setFont(new Font("Verdana", Font.PLAIN, 12));
+        toTF.setColumns(10);
+        toTF.setBounds(467, 51, 119, 23);
+        jf.getContentPane().add(toTF);
 
         title = new JLabel("Title:");
         title.setFont(new Font("Verdana", Font.PLAIN, 12));
@@ -65,6 +70,7 @@ public class Mail {
         send = new JButton("Send");
         send.setBounds(170, 51, 273, 89);
         jf.getContentPane().add(send);
+        send.addActionListener(this);
 
         res = new JLabel("Result:");
         res.setFont(new Font("Verdana", Font.PLAIN, 12));
@@ -75,5 +81,33 @@ public class Mail {
         mes.setFont(new Font("Verdana", Font.PLAIN, 12));
         mes.setBounds(27, 150, 119, 23);
         jf.getContentPane().add(mes);
+
+        jf.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(Mail::new);
+    }
+
+    public void actionPerformed(ActionEvent ae) {
+        try {
+        if (!emailTF.getText().equals("")) {
+            passwordTF.getPassword();
+            if (!toTF.getText().equals("")) {
+                SendEmail se = new SendEmail();
+                se.send(emailTF.getText(), new String(passwordTF.getPassword()), toTF.getText(),
+                        titleTF.getText(), message.getText());
+                res.setText("Result: OK.");
+            }
+            else {
+                res.setText("Result: Write To.");
+            }
+        }
+        else {
+            res.setText("Result: Write you email.");
+        }
+        } catch (MessagingException me) {
+            res.setText("Result: Username and Password not accepted.");
+        }
     }
 }
