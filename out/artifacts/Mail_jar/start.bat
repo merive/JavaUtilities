@@ -1,1 +1,1 @@
-java -classpath C:\Users\maxim\IdeaProjects\Projects\JavaUtilites\out\production\JavaUtilites;C:\Users\maxim\JavaLibs\JavaMail\activation.jar;C:\Users\maxim\JavaLibs\JavaMail\javax.mail.jar;C:\Users\maxim\JavaLibs\JavaMail\mail.jar SendEmail.Mail
+java -jar JavaUtilites.jar
