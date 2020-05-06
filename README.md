@@ -9,3 +9,4 @@ _Utility List:_
 * RandomGame
 * Calculator
 * Mail
+* Watch
