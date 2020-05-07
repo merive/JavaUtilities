@@ -4,26 +4,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class RandomGame implements ActionListener {
+public class RandomName implements ActionListener {
 
     JFrame jf;
     JLabel jl, jlRes;
     JTextField jtf;
     JButton jb;
 
-    RandomGame() {
-        jf = new JFrame("Random Game");
+    RandomName() {
+        jf = new JFrame("Random Name");
         jf.setSize(450, 150);
         jf.setLayout(new FlowLayout());
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        jl = new JLabel("Enter the name of the games, etc. (Separated by space) and press ENTER.");
+        jl = new JLabel("Enter the names (Separated by space) and press ENTER.");
 
         jtf = new JTextField(40);
         jtf.setActionCommand("Start");
 
         jb = new JButton("To begin");
-        jb.setPreferredSize(new Dimension(402,25));
+        jb.setPreferredSize(new Dimension(402, 25));
 
         jtf.addActionListener(this);
         jb.addActionListener(this);
@@ -39,7 +39,7 @@ public class RandomGame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(RandomGame::new);
+        SwingUtilities.invokeLater(RandomName::new);
     }
 
     public void actionPerformed(ActionEvent ae) {
