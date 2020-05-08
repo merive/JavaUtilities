@@ -3,9 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Watch_jar</output-path>
     <root id="archive" name="JavaUtilites.jar">
       <element id="module-output" name="JavaUtilites" />
-      <element id="extracted-dir" path="$USER_HOME$/JavaLibs/JavaMail/mail.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/JavaLibs/JavaMail/javax.mail.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/JavaLibs/JavaMail/activation.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/JavaLibs/JavaMail/mail.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
