@@ -30,14 +30,14 @@ public class Watch implements ActionListener {
         jf.getContentPane().setLayout(null);
 
         timeLabel = new JLabel("");
-        timeLabel.setBounds(12, 37, 576, 59);
+        timeLabel.setBounds(12, 19, 576, 59);
         timeLabel.setHorizontalAlignment(SwingConstants.CENTER);
         timeLabel.setFont(new Font("Bahnschrift", Font.PLAIN, 28));
         timeLabel.setForeground(Color.GREEN);
         jf.getContentPane().add(timeLabel);
 
         colorButton = new JButton("");
-        colorButton.setBounds(98, 106, 404, 17);
+        colorButton.setBounds(100, 97, 400, 17);
         colorButton.addActionListener(this);
         colorButton.setIcon(new ImageIcon("C:\\Users\\maxim\\IdeaProjects\\Projects\\JavaUtilites\\src\\Watch\\rainbow.gif"));
         jf.getContentPane().add(colorButton);
