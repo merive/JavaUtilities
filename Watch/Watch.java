@@ -1,5 +1,3 @@
-package Watch;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -39,7 +37,7 @@ public class Watch implements ActionListener {
         colorButton = new JButton("");
         colorButton.setBounds(100, 97, 400, 17);
         colorButton.addActionListener(this);
-        colorButton.setIcon(new ImageIcon("C:\\Users\\maxim\\IdeaProjects\\Projects\\JavaUtilites\\src\\Watch\\rainbow.gif"));
+        colorButton.setIcon(new ImageIcon(getClass().getResource("rainbow.gif")));
         jf.getContentPane().add(colorButton);
 
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
