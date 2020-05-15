@@ -4,13 +4,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculator implements ActionListener {
-    JFrame jf;
-    JLabel jlRes;
-    JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bRes, bPlus, bMinus, bMulti, bDivision, bClear;
-    String OPERATOR = "null";
-    String[] nums;
-    int num1, num2;
-    String res;
+    public static JLabel jlRes;
+    public JFrame jf;
+    public JButton b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, bRes, bPlus, bMinus, bMulti, bDivision, bClear;
+    public String OPERATOR = "null";
+    public String[] nums;
+    public int num1, num2;
+    public String res;
 
 
     Calculator() {
@@ -129,87 +129,104 @@ public class Calculator implements ActionListener {
         SwingUtilities.invokeLater(Calculator::new);
     }
 
+    public void checkError() {
+        if (jlRes.getText().equals("Error")) {
+            jlRes.setText("");
+            OPERATOR = "null";
+        }
+    }
+
     public void actionPerformed(ActionEvent ae) {
-        switch (ae.getActionCommand()) {
-            case "1":
-                jlRes.setText(jlRes.getText() + "1");
-                break;
-            case "2":
-                jlRes.setText(jlRes.getText() + "2");
-                break;
-            case "3":
-                jlRes.setText(jlRes.getText() + "3");
-                break;
-            case "4":
-                jlRes.setText(jlRes.getText() + "4");
-                break;
-            case "5":
-                jlRes.setText(jlRes.getText() + "5");
-                break;
-            case "6":
-                jlRes.setText(jlRes.getText() + "6");
-                break;
-            case "7":
-                jlRes.setText(jlRes.getText() + "7");
-                break;
-            case "8":
-                jlRes.setText(jlRes.getText() + "8");
-                break;
-            case "9":
-                jlRes.setText(jlRes.getText() + "9");
-                break;
-            case "0":
-                jlRes.setText(jlRes.getText() + "0");
-                break;
-            case "C":
-                jlRes.setText("");
-                break;
-            case "+":
-                if (OPERATOR.equals("null")) {
-                    jlRes.setText(jlRes.getText() + "+");
-                    OPERATOR = ae.getActionCommand();
-                } else {
-                    getRes();
-                }
-                break;
-            case "-":
-                if (OPERATOR.equals("null")) {
-                    jlRes.setText(jlRes.getText() + "-");
-                    OPERATOR = ae.getActionCommand();
-                } else {
-                    getRes();
-                }
-                break;
-            case "*":
-                if (OPERATOR.equals("null")) {
-                    jlRes.setText(jlRes.getText() + "*");
-                    OPERATOR = ae.getActionCommand();
-                } else {
-                    getRes();
-                }
-                break;
-            case "/":
-                if (OPERATOR.equals("null")) {
-                    jlRes.setText(jlRes.getText() + "/");
-                    OPERATOR = ae.getActionCommand();
-                } else {
-                    getRes();
-                }
-                break;
-            case "=":
-                if (OPERATOR.equals("null")) {
-                    jlRes.setText(jlRes.getText().split(OPERATOR)[0]);
-                } else {
-                    getRes();
-                }
-                break;
+        try {
+            checkError();
+            switch (ae.getActionCommand()) {
+                case "1":
+                    jlRes.setText(jlRes.getText() + "1");
+                    break;
+                case "2":
+                    jlRes.setText(jlRes.getText() + "2");
+                    break;
+                case "3":
+                    jlRes.setText(jlRes.getText() + "3");
+                    break;
+                case "4":
+                    jlRes.setText(jlRes.getText() + "4");
+                    break;
+                case "5":
+                    jlRes.setText(jlRes.getText() + "5");
+                    break;
+                case "6":
+                    jlRes.setText(jlRes.getText() + "6");
+                    break;
+                case "7":
+                    jlRes.setText(jlRes.getText() + "7");
+                    break;
+                case "8":
+                    jlRes.setText(jlRes.getText() + "8");
+                    break;
+                case "9":
+                    jlRes.setText(jlRes.getText() + "9");
+                    break;
+                case "0":
+                    jlRes.setText(jlRes.getText() + "0");
+                    break;
+                case "C":
+                    jlRes.setText("");
+                    OPERATOR = "null";
+                    break;
+                case "+":
+                    if (OPERATOR.equals("null")) {
+                        jlRes.setText(jlRes.getText() + "+");
+                        OPERATOR = ae.getActionCommand();
+                    } else {
+                        getRes();
+                    }
+                    break;
+                case "-":
+                    if (OPERATOR.equals("null")) {
+                        jlRes.setText(jlRes.getText() + "-");
+                        OPERATOR = ae.getActionCommand();
+                    } else {
+                        getRes();
+                    }
+                    break;
+                case "*":
+                    if (OPERATOR.equals("null")) {
+                        jlRes.setText(jlRes.getText() + "*");
+                        OPERATOR = ae.getActionCommand();
+                    } else {
+                        getRes();
+                    }
+                    break;
+                case "/":
+                    if (OPERATOR.equals("null")) {
+                        jlRes.setText(jlRes.getText() + "/");
+                        OPERATOR = ae.getActionCommand();
+                    } else {
+                        getRes();
+                    }
+                    break;
+                case "=":
+                    if (OPERATOR.equals("null")) {
+                        jlRes.setText(jlRes.getText().split(OPERATOR)[0]);
+                    } else {
+                        getRes();
+                    }
+                    break;
+            }
+        } catch (java.lang.NumberFormatException e) {
+            jlRes.setText("Error");
         }
     }
 
     public void getRes() {
-        nums = jlRes.getText().split("\\" + OPERATOR);
-        num1 = Integer.parseInt(nums[0]);
-        num2 = Integer.parseInt(nums[1]);
+        try {
+            nums = jlRes.getText().split("\\" + OPERATOR);
+            num1 = Integer.parseInt(nums[0]);
+            num2 = Integer.parseInt(nums[1]);
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+            jlRes.setText("Error");
+        }
         switch (OPERATOR) {
             case "+":
                 res = Integer.toString(num1 + num2);
@@ -233,8 +250,7 @@ public class Calculator implements ActionListener {
                     OPERATOR = "null";
                     break;
                 } catch (ArithmeticException exc) {
-                    jlRes.setText("");
-                    OPERATOR = "null";
+                    jlRes.setText("Error");
                     break;
                 }
         }
