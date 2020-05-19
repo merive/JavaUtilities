@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/SendEmail" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Watch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/RRC" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
