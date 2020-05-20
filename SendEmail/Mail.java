@@ -13,11 +13,9 @@ public class Mail implements ActionListener {
     JButton send;
     JTextPane message;
     JList<Integer> list;
+    JScrollPane scrollPane;
     Integer[] qty = new Integer[99];
 
-    /**
-     * @wbp.parser.entryPoint
-     */
     Mail() {
         jf = new JFrame("Mail");
         jf.setSize(773, 510);
@@ -103,7 +101,7 @@ public class Mail implements ActionListener {
         list.setBounds(460, 73, 275, 80);
         jf.getContentPane().add(list);
 
-        JScrollPane scrollPane = new JScrollPane(list);
+        scrollPane = new JScrollPane(list);
         scrollPane.setBounds(400, 66, 336, 74);
         jf.getContentPane().add(scrollPane);
 
