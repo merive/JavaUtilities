@@ -5,9 +5,8 @@ import java.util.Random;
 
 public class Encrypt implements Chiper {
 
-    public static HashMap<String, String> encryptChiper() {
-
-        Random r = new Random(23);
+    public static HashMap<String, String> chiper(int seed) {
+        Random r = new Random(seed);
         HashMap<String, String> alf = new HashMap<>();
         ArrayList<String> alfLower = new ArrayList<>(Arrays.asList(("abcdefghijklmnopqrstuvwxyz" +
                 ".,!?&/:'-@#~ABCDEFGHIJKLMNOPQRSTUVWXUZ 1234567890_+=<>$%^*()`").split("")));
@@ -18,21 +17,17 @@ public class Encrypt implements Chiper {
             alf.put(alfLower.get(ran), n);
             alfLower.remove(alfLower.get(ran));
         });
-        System.out.println(alf);
         return alf;
     }
 
 
-    public static String encrypt(String text) {
+    public static String encrypt(String text, int seed) {
         StringBuilder res = new StringBuilder();
         String[] n = text.split("");
         for (int i = 0; i < text.length(); i++) {
-            res.append(encryptChiper().get(n[i]));
+            res.append(chiper(seed).get(n[i]));
         }
         return res.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(Encrypt.encrypt("2TG"));
-    }
 }

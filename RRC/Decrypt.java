@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class Decrypt implements Chiper {
 
-    public static HashMap<String, String> decryptChiper() {
-        Random r = new Random(23);
+    public static HashMap<String, String> chiper(int seed) {
+        Random r = new Random(seed);
         HashMap<String, String> alf = new HashMap<>();
         ArrayList<String> alfLower = new ArrayList<>(Arrays.asList(("abcdefghijklmnopqrstuvwxyz" +
                 ".,!?&/:'-@#~ABCDEFGHIJKLMNOPQRSTUVWXUZ 1234567890_+=<>$%^*()`").split("")));
@@ -22,16 +22,12 @@ public class Decrypt implements Chiper {
     }
 
 
-    public static String decrypt(String text) {
+    public static String decrypt(String text, int seed) {
         StringBuilder res = new StringBuilder();
         String[] n = text.split("");
         for (int i = 0; i < text.length(); i++) {
-            res.append(decryptChiper().get(n[i]));
+            res.append(Decrypt.chiper(seed).get(n[i]));
         }
         return res.toString();
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Decrypt.decrypt("123"));
     }
 }

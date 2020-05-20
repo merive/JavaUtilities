@@ -5,7 +5,7 @@ public interface Chiper {
         return null;
     }
 
-    static String setReplace(String text) {
+    static String chiper(String text, int seed) {
         return "";
     }
 }
