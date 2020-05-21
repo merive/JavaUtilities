@@ -17,7 +17,6 @@ public class Decrypt implements Chiper {
             alf.put(n, alfLower.get(ran));
             alfLower.remove(alfLower.get(ran));
         });
-        System.out.println(alf);
         return alf;
     }
 

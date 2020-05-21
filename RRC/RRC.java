@@ -57,6 +57,10 @@ public class RRC implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-
+        if (ae.getActionCommand().equals("Decrypt")) {
+            res.setText("Result:\n" + Decrypt.decrypt(jtp.getText(), 23));
+        } else {
+            res.setText("Result:\n" + Encrypt.encrypt(jtp.getText(), 23));
+        }
     }
 }
