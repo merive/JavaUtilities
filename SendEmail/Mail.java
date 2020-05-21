@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 public class Mail implements ActionListener {
 
     JFrame jf;
-    JTextField emailTF, titleTF, toTF;
+    JTextArea emailTF, titleTF, toTF;
     JPasswordField passwordTF;
     JLabel email, toLb, YouPassword, mes, title, res, spam;
     JButton send;
@@ -27,9 +27,11 @@ public class Mail implements ActionListener {
         email.setBounds(27, 26, 77, 23);
         jf.getContentPane().add(email);
 
-        emailTF = new JTextField();
+        emailTF = new JTextArea();
         emailTF.setFont(new Font("Verdana", Font.PLAIN, 12));
         emailTF.setBounds(27, 51, 157, 23);
+        emailTF.setWrapStyleWord(true);
+        emailTF.setLineWrap(true);
         jf.getContentPane().add(emailTF);
         emailTF.setColumns(10);
 
@@ -47,7 +49,7 @@ public class Mail implements ActionListener {
         toLb.setBounds(202, 29, 177, 16);
         jf.getContentPane().add(toLb);
 
-        toTF = new JTextField();
+        toTF = new JTextArea();
         toTF.setFont(new Font("Verdana", Font.PLAIN, 12));
         toTF.setColumns(10);
         toTF.setBounds(202, 51, 177, 23);
@@ -58,7 +60,7 @@ public class Mail implements ActionListener {
         title.setBounds(202, 95, 177, 16);
         jf.getContentPane().add(title);
 
-        titleTF = new JTextField();
+        titleTF = new JTextArea();
         titleTF.setFont(new Font("Verdana", Font.PLAIN, 12));
         titleTF.setColumns(10);
         titleTF.setBounds(202, 115, 177, 24);

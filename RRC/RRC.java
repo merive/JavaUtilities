@@ -57,8 +57,6 @@ public class RRC implements ActionListener {
 
         resTA = new JTextArea();
         resTA.setFont(new Font("Verdana", Font.PLAIN, 14));
-        resTA.setColumns(4);
-        resTA.setTabSize(4);
         resTA.setLineWrap(true);
         resTA.setWrapStyleWord(true);
         resTA.setBackground(SystemColor.menu);

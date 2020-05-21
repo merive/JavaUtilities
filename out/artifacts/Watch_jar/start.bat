@@ -1,1 +1,1 @@
-java -jar JavaUtilites.jar
+java -jar JavaUtilities.jar
