@@ -16,9 +16,6 @@ public class Watch implements ActionListener {
     JLabel timeLabel;
     JButton colorButton;
 
-    /**
-     * @wbp.parser.entryPoint
-     */
     public Watch() {
         jf = new JFrame("Watch");
 
