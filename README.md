@@ -11,3 +11,6 @@ _Utility List:_
 * _Mail:_ Spam utility,
 * _Watch:_ Interesting watch,
 * _RRC:_ Program for encryption and decryption.
+
+To work with the repository, you need to install [Java](https://www.oracle.com/java/technologies/javase-downloads.html) and its libraries,
+ namely [JavaMail](https://github.com/javaee/javamail/releases) and [JavaFX](https://gluonhq.com/products/javafx/)
