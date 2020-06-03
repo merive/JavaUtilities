@@ -8,6 +8,7 @@ public class Controller {
 
     public Label res;
     public TextField text;
+    public javafx.scene.layout.Pane Pane;
 
     public void Run(ActionEvent actionEvent) {
         res.setText("And it's: " +
