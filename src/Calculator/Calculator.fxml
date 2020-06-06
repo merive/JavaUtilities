@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-
-<GridPane alignment="center" hgap="10" prefHeight="177.0" prefWidth="525.0" styleClass="background" stylesheets="@style.css" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RandomNameController">
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="177.0" prefWidth="525.0"
+          styleClass="background" stylesheets="@style.css" vgap="10"
+          xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="RandomNameController">
     <columnConstraints>
-        <ColumnConstraints />
+        <ColumnConstraints/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints />
+        <RowConstraints/>
     </rowConstraints>
 </GridPane>

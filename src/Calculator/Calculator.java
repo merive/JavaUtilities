@@ -18,6 +18,5 @@ public class Calculator extends Application {
         primaryStage.setTitle("Calculator");
         primaryStage.setScene(new Scene(root, 523, 185));
         primaryStage.show();
-
     }
 }

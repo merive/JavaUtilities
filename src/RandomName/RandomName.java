@@ -18,6 +18,5 @@ public class RandomName extends Application {
         primaryStage.setTitle("RandomName");
         primaryStage.setScene(new Scene(root, 523, 185));
         primaryStage.show();
-
     }
 }
