@@ -6,7 +6,7 @@
 
 <GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="177.0" prefWidth="525.0"
           styleClass="background" stylesheets="@style.css" vgap="10"
-          xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="Controller">
+          xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="RandomNameController">
     <columnConstraints>
         <ColumnConstraints/>
     </columnConstraints>
@@ -27,6 +27,10 @@
         </Label>
         <Label layoutX="113.0" layoutY="25.0" text="Enter the names (Separated by space) and press ENTER."/>
         <TextField fx:id="text" layoutX="16.0" layoutY="54.0" prefHeight="25.0" prefWidth="487.0" styleClass="textfield"
-                   stylesheets="@style.css"/>
+                   stylesheets="@style.css">
+            <font>
+                <Font name="Verdana" size="12.0"/>
+            </font>
+        </TextField>
     </Pane>
 </GridPane>

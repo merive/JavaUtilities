@@ -3,7 +3,7 @@ import javafx.scene.control.TextField;
 
 import java.util.Random;
 
-public class Controller {
+public class RandomNameController {
 
     public Label res;
     public TextField text;
