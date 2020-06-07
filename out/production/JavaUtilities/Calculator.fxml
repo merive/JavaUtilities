@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="242.0" prefWidth="216.0"
-          styleClass="background"
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="242.0" prefWidth="216.0" styleClass="background"
           vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
           fx:controller="CalculatorController">
     <columnConstraints>
@@ -15,29 +14,40 @@
     <rowConstraints>
         <RowConstraints/>
     </rowConstraints>
-    <Pane prefHeight="246.0" prefWidth="217.0">
-        <Button layoutX="59.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="8"/>
-        <Button layoutX="7.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="7"/>
-        <Button layoutX="111.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="9"/>
-        <Button layoutX="163.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="+"/>
-        <Button layoutX="7.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="4"/>
-        <Button layoutX="59.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="5"/>
+    <Pane prefHeight="246.0" prefWidth="217.0" styleClass="background" stylesheets="@CalculatorStyle.css">
+        <Button layoutX="59.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="8"/>
+        <Button layoutX="7.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="7"/>
+        <Button layoutX="111.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="9"/>
+        <Button layoutX="163.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="+"/>
+        <Button layoutX="7.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="4"/>
+        <Button layoutX="59.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="5"/>
         <Button layoutX="111.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
-                text="6"/>
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="6"/>
         <Button layoutX="163.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
-                text="-"/>
-        <Button layoutX="7.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="1"/>
-        <Button layoutX="59.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="2"/>
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="-"/>
+        <Button layoutX="7.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="1"/>
+        <Button layoutX="59.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="2"/>
         <Button layoutX="111.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
-                text="3"/>
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="3"/>
         <Button layoutX="163.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
-                text="*"/>
-        <Button layoutX="7.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="C"/>
-        <Button layoutX="59.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="0"/>
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="*"/>
+        <Button layoutX="7.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="C"/>
+        <Button layoutX="59.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="0"/>
         <Button layoutX="111.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
-                text="="/>
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="="/>
         <Button layoutX="163.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
-                text="/"/>
-        <Label layoutX="5.0" layoutY="7.0" prefHeight="39.0" prefWidth="198.0"/>
+                styleClass="textfield" stylesheets="@CalculatorStyle.css" text="/"/>
+        <Label layoutX="5.0" layoutY="7.0" prefHeight="39.0" prefWidth="206.0" styleClass="textfield"
+               stylesheets="@CalculatorStyle.css"/>
     </Pane>
 </GridPane>

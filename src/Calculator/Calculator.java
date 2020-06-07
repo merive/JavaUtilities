@@ -14,7 +14,7 @@ public class Calculator extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Calculator/Calculator.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Calculator.fxml"));
         primaryStage.setTitle("Calculator");
         primaryStage.setScene(new Scene(root, 216, 242));
         primaryStage.show();
