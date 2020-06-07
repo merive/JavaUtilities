@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Calculator extends Application {
+public class RandomName extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -14,9 +14,9 @@ public class Calculator extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Calculator/Calculator.fxml"));
-        primaryStage.setTitle("Calculator");
-        primaryStage.setScene(new Scene(root, 216, 242));
+        Parent root = FXMLLoader.load(getClass().getResource("RandomName.fxml"));
+        primaryStage.setTitle("RandomName");
+        primaryStage.setScene(new Scene(root, 523, 185));
         primaryStage.show();
     }
 }

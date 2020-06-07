@@ -1,12 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-
-<GridPane alignment="center" hgap="10" prefHeight="177.0" prefWidth="525.0" styleClass="background" stylesheets="@style.css" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RandomNameController">
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="242.0" prefWidth="216.0"
+          styleClass="background"
+          vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          fx:controller="CalculatorController">
     <columnConstraints>
-        <ColumnConstraints />
+        <ColumnConstraints/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints />
+        <RowConstraints/>
     </rowConstraints>
+    <Pane prefHeight="246.0" prefWidth="217.0">
+        <Button layoutX="59.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="8"/>
+        <Button layoutX="7.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="7"/>
+        <Button layoutX="111.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="9"/>
+        <Button layoutX="163.0" layoutY="54.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="+"/>
+        <Button layoutX="7.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="4"/>
+        <Button layoutX="59.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="5"/>
+        <Button layoutX="111.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                text="6"/>
+        <Button layoutX="163.0" layoutY="103.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                text="-"/>
+        <Button layoutX="7.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="1"/>
+        <Button layoutX="59.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="2"/>
+        <Button layoutX="111.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                text="3"/>
+        <Button layoutX="163.0" layoutY="152.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                text="*"/>
+        <Button layoutX="7.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="C"/>
+        <Button layoutX="59.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0" text="0"/>
+        <Button layoutX="111.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                text="="/>
+        <Button layoutX="163.0" layoutY="197.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="45.0"
+                text="/"/>
+        <Label layoutX="5.0" layoutY="7.0" prefHeight="39.0" prefWidth="198.0"/>
+    </Pane>
 </GridPane>
