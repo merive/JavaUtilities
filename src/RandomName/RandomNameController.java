@@ -7,7 +7,6 @@ public class RandomNameController {
 
     public Label res;
     public TextField text;
-    public javafx.scene.layout.Pane Pane;
 
     public void Run() {
         res.setText("And it's: " +
