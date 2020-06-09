@@ -7,6 +7,7 @@ public class CalculatorController {
 
     public TextField ResBar;
     public String OPERATOR = "";
+    int num1, num2;
 
 
     @FXML
@@ -138,8 +139,13 @@ public class CalculatorController {
 
     public void getRes() {
         String[] numbers = ResBar.getText().split(String.format("\\%s", OPERATOR));
-        int num1 = Integer.parseInt(numbers[0]);
-        int num2 = Integer.parseInt(numbers[1]);
+        try {
+            num1 = Integer.parseInt(numbers[0]);
+            num2 = Integer.parseInt(numbers[1]);
+        } catch (Exception e) {
+            ResBar.setText("Error");
+            OPERATOR = "";
+        }
         switch (OPERATOR) {
             case "+":
                 ResBar.setText(Integer.toString(num1 + num2));
