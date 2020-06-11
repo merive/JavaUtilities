@@ -1,0 +1,45 @@
+.background {
+    -fx-background-color: teal;
+}
+
+.background-elm {
+    -fx-background-color: cadetblue;
+}
+
+.text-area .content{
+    -fx-background-color: cadetblue;
+}
+
+.text-area {
+    -fx-background-color: cadetblue;
+}
+
+.spinner .content {
+    -fx-body-color: cadetblue;
+}
+
+.spinner .text-field {
+    -fx-background-color: cadetblue;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-body-color: cadetblue;
+    -fx-background-color: cadetblue;
+}
+
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    /* interpolate color between yellow and red based on first color brightness */
+    -fx-body-color: cadetblue;
+    -fx-background-color: teal;
+}
+
+.spinner .increment-arrow-button:hover:pressed,
+.spinner .decrement-arrow-button:hover:pressed,
+.spinner .increment-arrow-button:pressed,
+.spinner .decrement-arrow-button:pressed {
+    /* interpolate color between yellow and red based on first color brightness */
+    -fx-body-color: cadetblue;
+    -fx-background-color: teal;
+}
