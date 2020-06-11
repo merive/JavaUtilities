@@ -7,7 +7,7 @@ public class MailController {
     public TextField yEmail;
     public PasswordField yPassword;
     public TextField to;
-    public Spinner qty;
+    public Spinner<Integer> qty;
     public TextField title;
     public TextArea message;
 }
