@@ -1,61 +1,26 @@
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Random;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
-public class Watch implements ActionListener {
+import java.io.IOException;
 
-    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("'Today' dd.MM.yyyy, HH:mm:ss");
-    JFrame jf;
-    JLabel timeLabel;
-    JButton colorButton;
-
-    public Watch() {
-        jf = new JFrame("Watch");
-
-        jf.setBackground(Color.BLACK);
-        jf.getContentPane().setBackground(Color.BLACK);
-        jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jf.getContentPane().setLayout(null);
-
-        timeLabel = new JLabel("");
-        timeLabel.setBounds(12, 19, 576, 59);
-        timeLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        timeLabel.setFont(new Font("Bahnschrift", Font.PLAIN, 28));
-        timeLabel.setForeground(Color.GREEN);
-        jf.getContentPane().add(timeLabel);
-
-        colorButton = new JButton("");
-        colorButton.setBounds(100, 97, 400, 17);
-        colorButton.addActionListener(this);
-        colorButton.setIcon(new ImageIcon(getClass().getResource("rainbow.gif")));
-        jf.getContentPane().add(colorButton);
-
-        ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
-        executor.scheduleWithFixedDelay(() -> {
-            LocalDateTime now = LocalDateTime.now();
-            String nowFormatted = dateTimeFormatter.format(now);
-            SwingUtilities.invokeLater(() -> timeLabel.setText(nowFormatted));
-        }, 0, 1, TimeUnit.SECONDS);
-
-        jf.setSize(615, 170);
-        jf.setVisible(true);
-    }
-
+public class Watch extends Application {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Watch::new);
+        launch();
+        System.exit(0);
     }
 
-    public void actionPerformed(ActionEvent e) {
-        Color[] colors = {Color.GRAY, Color.BLUE, Color.GREEN, Color.CYAN,
-                Color.MAGENTA, Color.RED, Color.WHITE, Color.PINK, Color.YELLOW, Color.ORANGE};
-        timeLabel.setForeground(colors[new Random().nextInt(colors.length - 1)]);
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("Watch.fxml"));
+        primaryStage.setTitle("Watch");
+        primaryStage.getIcons().add(new Image("clock.png"));
+        primaryStage.setScene(new Scene(root, 615, 170));
+        primaryStage.show();
     }
 }
+

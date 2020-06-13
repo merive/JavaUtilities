@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="170.0" prefWidth="615.0" styleClass="background"
+          stylesheets="@WatchStyle.css" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          fx:controller="WatchController">
+    <columnConstraints>
+        <ColumnConstraints/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints/>
+    </rowConstraints>
+    <Pane onMouseClicked="#setColor" onMouseMoved="#setTime" prefHeight="170.0" prefWidth="615.0"
+          styleClass="background" stylesheets="@WatchStyle.css">
+        <Label fx:id="time" alignment="CENTER" layoutX="16.0" layoutY="60.0" prefHeight="50.0" prefWidth="590.0"
+               textFill="#00ddff">
+            <font>
+                <Font name="Verdana" size="28.0"/>
+            </font>
+        </Label>
+    </Pane>
+</GridPane>
