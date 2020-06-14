@@ -9,7 +9,7 @@ _Utility List:_
 * _RandomName:_ Utility for selecting a name (_JavaFX_),
 * _Calculator:_ Simple calculator (_JavaFX_),
 * _Mail:_ Spam utility (_JavaFX + JavaMail_),
-* _Watch:_ Interesting watch (_Swing_),
+* _Watch:_ Interesting watch (_JavaFX_),
 * _RRC:_ Program for encryption and decryption (_Swing_).
 
 To work with the repository, you need to install [Java](https://www.oracle.com/java/technologies/javase-downloads.html) and its libraries,
