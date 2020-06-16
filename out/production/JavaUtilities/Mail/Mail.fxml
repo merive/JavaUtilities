@@ -45,7 +45,7 @@
         </TextField>
         <Spinner fx:id="qty" editable="true" layoutX="199.0" layoutY="80.0" stylesheets="@MailStyle.css">
             <valueFactory>
-                <SpinnerValueFactory.IntegerSpinnerValueFactory max="93" min="1"/>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="85"/>
             </valueFactory>
         </Spinner>
         <Label layoutX="199.0" layoutY="63.0" text="Qty:"/>
