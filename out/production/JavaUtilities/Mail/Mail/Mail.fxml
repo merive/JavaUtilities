@@ -1,93 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" prefHeight="395.0" prefWidth="700.0"
-          styleClass="background" stylesheets="@MailStyle.css" vgap="10"
-          xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="Mail.MailController">
-    <Pane prefHeight="405.0" prefWidth="700.0" styleClass="background" stylesheets="@MailStyle.css">
+
+<GridPane alignment="center" hgap="10" onMouseClicked="#start" prefHeight="395.0" prefWidth="700.0" styleClass="background" stylesheets="@MailStyle.css" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mail.MailController">
+    <Pane fx:id="startPane" prefHeight="200.0" prefWidth="200.0">
+        <Label layoutX="326.0" layoutY="47.0" text="Mail">
+           <font>
+               <Font name="Verdana" size="24.0" />
+           </font>
+        </Label>
+        <Label layoutX="300.0" layoutY="318.0" text="Click to start">
+           <font>
+               <Font size="18.0" />
+           </font>
+        </Label>
+    </Pane>
+    <Pane fx:id="pane" prefHeight="405.0" prefWidth="700.0" styleClass="background" stylesheets="@MailStyle.css" visible="false">
         <Label layoutX="15.0" layoutY="14.0" prefHeight="17.0" prefWidth="73.0" text="Your Email:">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </Label>
-        <TextField fx:id="yEmail" layoutX="13.0" layoutY="31.0" styleClass="background-elm"
-                   stylesheets="@MailStyle.css">
+        <TextField fx:id="yEmail" layoutX="13.0" layoutY="31.0" styleClass="background-elm" stylesheets="@MailStyle.css">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </TextField>
-        <Label xmlns:fx="http://javafx.com/fxml/1" layoutX="15.0" layoutY="63.0" prefHeight="17.0" prefWidth="96.0"
-               text="Your Password:" xmlns="http://javafx.com/javafx/10.0.2-internal">
+        <Label layoutX="15.0" layoutY="63.0" prefHeight="17.0" prefWidth="96.0" text="Your Password:" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </Label>
-        <PasswordField fx:id="yPassword" layoutX="13.0" layoutY="80.0" styleClass="background-elm"
-                       stylesheets="@MailStyle.css">
+        <PasswordField fx:id="yPassword" layoutX="13.0" layoutY="80.0" styleClass="background-elm" stylesheets="@MailStyle.css">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </PasswordField>
         <Label layoutX="199.0" layoutY="14.0" prefHeight="17.0" prefWidth="63.0" text="To:">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </Label>
         <TextField fx:id="to" layoutX="199.0" layoutY="31.0" styleClass="background-elm" stylesheets="@MailStyle.css">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </TextField>
         <Spinner fx:id="qty" editable="true" layoutX="199.0" layoutY="80.0" stylesheets="@MailStyle.css">
             <valueFactory>
-                <SpinnerValueFactory.IntegerSpinnerValueFactory min="1" max="85"/>
+                <SpinnerValueFactory.IntegerSpinnerValueFactory max="85" min="1" />
             </valueFactory>
         </Spinner>
-        <Label layoutX="199.0" layoutY="63.0" text="Qty:"/>
+        <Label layoutX="199.0" layoutY="63.0" text="Qty:" />
         <Label layoutX="508.0" layoutY="32.0" text="Title:">
             <font>
-                <Font name="Verdana" size="18.0"/>
+                <Font name="Verdana" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="title" layoutX="457.0" layoutY="67.0" styleClass="background-elm"
-                   stylesheets="@MailStyle.css">
+        <TextField fx:id="title" layoutX="457.0" layoutY="67.0" styleClass="background-elm" stylesheets="@MailStyle.css">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </TextField>
-        <TextArea fx:id="message" layoutX="10.0" layoutY="128.0" prefHeight="179.0" prefWidth="680.0"
-                  styleClass="text-area" stylesheets="@MailStyle.css" wrapText="true">
+        <TextArea fx:id="message" layoutX="10.0" layoutY="128.0" prefHeight="179.0" prefWidth="680.0" styleClass="text-area" stylesheets="@MailStyle.css" wrapText="true">
             <font>
-                <Font name="Verdana" size="16.0"/>
+                <Font name="Verdana" size="16.0" />
             </font>
         </TextArea>
-        <Button layoutX="273.0" layoutY="317.0" mnemonicParsing="false" onAction="#send" prefHeight="32.0"
-                prefWidth="149.0" styleClass="background-elm" stylesheets="@MailStyle.css" text="Send">
+        <Button layoutX="273.0" layoutY="317.0" mnemonicParsing="false" onAction="#send" prefHeight="32.0" prefWidth="149.0" styleClass="background-elm" stylesheets="@MailStyle.css" text="Send">
             <font>
-                <Font name="Verdana" size="18.0"/>
+                <Font name="Verdana" size="18.0" />
             </font>
         </Button>
         <Label layoutX="15.0" layoutY="111.0" text="Message:">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </Label>
-        <TextField fx:id="res" layoutX="11.0" layoutY="359.0" prefHeight="25.0" prefWidth="680.0"
-                   styleClass="background" stylesheets="@MailStyle.css" text="Result:">
+        <TextField fx:id="res" layoutX="11.0" layoutY="359.0" prefHeight="25.0" prefWidth="680.0" styleClass="background" stylesheets="@MailStyle.css" text="Result:">
             <font>
-                <Font name="Verdana" size="12.0"/>
+                <Font name="Verdana" size="12.0" />
             </font>
         </TextField>
     </Pane>
     <columnConstraints>
-        <ColumnConstraints/>
+        <ColumnConstraints />
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints/>
+        <RowConstraints />
     </rowConstraints>
 </GridPane>

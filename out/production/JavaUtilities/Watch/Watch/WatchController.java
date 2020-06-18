@@ -3,6 +3,7 @@ package Watch;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
 import java.time.LocalDateTime;
@@ -14,10 +15,15 @@ import java.util.concurrent.TimeUnit;
 
 public class WatchController {
 
+    public Pane startPane;
+    public Pane pane;
+
     @FXML
     Label time;
 
-    public void setTime() {
+    public void start() {
+        startPane.setVisible(false);
+        pane.setVisible(true);
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("'Today' dd.MM.yyyy, HH:mm:ss");
         ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
         executor.scheduleWithFixedDelay(() -> {
