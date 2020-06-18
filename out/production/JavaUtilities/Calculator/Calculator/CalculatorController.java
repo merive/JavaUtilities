@@ -2,6 +2,7 @@ package Calculator;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 import java.util.Arrays;
 
@@ -9,6 +10,8 @@ public class CalculatorController {
 
     public TextField ResBar;
     public String OPERATOR = "";
+    public Pane pane;
+    public Pane startPane;
     int num1, num2;
 
 
@@ -172,5 +175,10 @@ public class CalculatorController {
                     break;
                 }
         }
+    }
+
+    public void start() {
+        startPane.setVisible(false);
+        pane.setVisible(true);
     }
 }
