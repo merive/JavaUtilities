@@ -4,6 +4,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 import javax.mail.MessagingException;
 
@@ -15,6 +16,8 @@ public class MailController {
     public TextField title;
     public TextArea message;
     public TextField res;
+    public Pane startPane;
+    public Pane pane;
 
 
     public void send() {
@@ -37,5 +40,10 @@ public class MailController {
         } catch (MessagingException me) {
             res.setText("Result: Email or Password not accepted.");
         }
+    }
+
+    public void start() {
+        startPane.setVisible(false);
+        pane.setVisible(true);
     }
 }
