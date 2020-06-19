@@ -16,3 +16,4 @@ To work with the repository, you need to install [Java](https://www.oracle.com/j
  namely [JavaMail](https://github.com/javaee/javamail/releases) and [JavaFX](https://gluonhq.com/products/javafx/).
  Also, to use _Mail_ you need to enable access for unsafe applications, otherwise letters will not be sent.
  To work with utilities on _JavaFX_, you need to configure your working environment according to the documentation.
+ To work with the project, we recommend using _Intellij Idea_.
