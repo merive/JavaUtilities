@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -16,10 +17,15 @@
          <font>
             <Font name="Verdana" size="18.0" />
          </font></Label>
-        <Label layoutX="63.0" layoutY="177.0" text="Click to start">
+        <Label layoutX="63.0" layoutY="197.0" text="Click to start">
          <font>
             <Font name="Verdana" size="14.0" />
          </font></Label>
+      <ImageView fitHeight="137.0" fitWidth="128.0" layoutX="44.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@calculator.png" />
+         </image>
+      </ImageView>
     </Pane>
     <Pane fx:id="pane" prefHeight="246.0" prefWidth="217.0" styleClass="background" stylesheets="@CalculatorStyle.css" visible="false">
         <Button id="num8" layoutX="59.0" layoutY="54.0" mnemonicParsing="false" onAction="#press8" prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="8" />
