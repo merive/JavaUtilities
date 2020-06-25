@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" onMouseClicked="#start" prefHeight="395.0"
+<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" onMouseClicked="#start" prefHeight="360.0"
           prefWidth="700.0" styleClass="background" stylesheets="@MailStyle.css"
           vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
           fx:controller="Mail.MailController">
@@ -94,12 +94,6 @@
                 <Font name="Verdana" size="12.0"/>
             </font>
         </Label>
-        <TextField fx:id="res" layoutX="11.0" layoutY="359.0" prefHeight="25.0" prefWidth="680.0"
-                   styleClass="background" stylesheets="@MailStyle.css" text="Result:">
-            <font>
-                <Font name="Verdana" size="12.0"/>
-            </font>
-        </TextField>
     </Pane>
     <columnConstraints>
         <ColumnConstraints/>

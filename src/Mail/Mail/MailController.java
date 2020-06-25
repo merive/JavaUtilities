@@ -1,9 +1,6 @@
 package Mail;
 
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 
 import javax.mail.MessagingException;
@@ -15,10 +12,9 @@ public class MailController {
     public Spinner<Integer> qty;
     public TextField title;
     public TextArea message;
-    public TextField res;
     public Pane startPane;
     public Pane pane;
-
+    public Alert alert;
 
     public void send() {
         try {
@@ -29,21 +25,30 @@ public class MailController {
                         SendEmail se = new SendEmail();
                         se.send(yEmail.getText(), yPassword.getText(), to.getText(),
                                 title.getText(), message.getText());
-                        res.setText("Result: OK.");
+                        openAlert("Result: OK");
+
                     }
                 } else {
-                    res.setText("Result: Write To.");
+                    openAlert("Result: Write To.");
                 }
             } else {
-                res.setText("Result: Write you email.");
+                openAlert("Result: Write you email.");
             }
         } catch (MessagingException me) {
-            res.setText("Result: Email or Password not accepted.");
+            openAlert("Result: Email or Password not accepted.");
         }
     }
 
     public void start() {
         startPane.setVisible(false);
         pane.setVisible(true);
+    }
+
+    public void openAlert(String res) {
+        alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Result");
+        alert.setHeaderText(null);
+        alert.setContentText(res);
+        alert.showAndWait();
     }
 }
