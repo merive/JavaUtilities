@@ -1,21 +1,24 @@
 package RandomName;
 
-import javafx.scene.control.Label;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 
 import java.util.Random;
 
 public class RandomNameController {
-
-    public Label res;
     public TextField text;
     public Pane pane;
     public Pane startPane;
+    public Alert alert;
 
     public void Run() {
-        res.setText("And it's: " +
+        alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Result");
+        alert.setHeaderText(null);
+        alert.setContentText("Result: " +
                 text.getText().split(" ")[new Random().nextInt(text.getText().split(" ").length)]);
+        alert.showAndWait();
     }
 
     public void start() {
