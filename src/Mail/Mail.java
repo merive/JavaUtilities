@@ -21,6 +21,7 @@ public class Mail extends Application {
         primaryStage.setTitle("Mail");
         primaryStage.getIcons().add(new Image("Mail/email.png"));
         primaryStage.setScene(new Scene(root, 700, 360));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

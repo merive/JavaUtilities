@@ -21,6 +21,7 @@ public class Calculator extends Application {
         primaryStage.setTitle("Calculator");
         primaryStage.getIcons().add(new Image("Calculator/calculator.png"));
         primaryStage.setScene(new Scene(root, 216, 242));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

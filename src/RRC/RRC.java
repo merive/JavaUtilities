@@ -21,6 +21,7 @@ public class RRC extends Application {
         primaryStage.setTitle("RRC");
         primaryStage.getIcons().add(new Image("RRC/key.png"));
         primaryStage.setScene(new Scene(root, 574, 341));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

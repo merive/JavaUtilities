@@ -21,6 +21,7 @@ public class RandomName extends Application {
         primaryStage.setTitle("RandomName");
         primaryStage.getIcons().add(new Image("RandomName/random.png"));
         primaryStage.setScene(new Scene(root, 525, 150));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

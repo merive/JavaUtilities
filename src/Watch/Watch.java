@@ -22,6 +22,7 @@ public class Watch extends Application {
         primaryStage.setTitle("Watch");
         primaryStage.getIcons().add(new Image("Watch/clock.png"));
         primaryStage.setScene(new Scene(root, 615, 170));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
