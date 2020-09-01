@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Random;
 
-public class Encrypt implements Chiper {
+public class Encrypt implements Chipper {
 
-    public static HashMap<String, String> chiper(int seed) {
+    public static HashMap<String, String> chipper(int seed) {
         Random r = new Random(seed);
         HashMap<String, String> alf = new HashMap<>();
         ArrayList<String> alfLower = new ArrayList<>(Arrays.asList(("abcdefghijklmnopqrstuvwxyz" +
@@ -27,7 +27,7 @@ public class Encrypt implements Chiper {
         StringBuilder res = new StringBuilder();
         String[] n = text.split("");
         for (int i = 0; i < text.length(); i++) {
-            res.append(chiper(seed).get(n[i]));
+            res.append(chipper(seed).get(n[i]));
         }
         return res.toString();
     }
