@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="185.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.RandomNameController">
+   <Pane prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #1b262c;">
+      <Label alignment="CENTER" layoutX="241.0" layoutY="14.0" text="RandomName" textFill="#bbe1fa">
+         <font>
+            <Font name="Droid Sans Mono" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text" layoutX="16.0" layoutY="55.0" prefHeight="25.0" prefWidth="568.0" style="-fx-background-color: #BBE1FA;">
+         <font>
+            <Font name="Droid Sans Mono" size="18.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="18.0" layoutY="159.0" prefHeight="18.0" prefWidth="568.0" text="Enter phrases/words through a ;" textFill="#bbe1fa">
+         <font>
+            <Font name="Droid Sans Mono" size="14.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="236.0" layoutY="106.0" mnemonicParsing="false" onAction="#returnResult" style="-fx-background-color: #bbe1fa;" text="Get result" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans Mono" size="16.0" />
+         </font>
+      </Button>
+   </Pane>
+</AnchorPane>
