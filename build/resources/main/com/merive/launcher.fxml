@@ -7,55 +7,51 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.LauncherController">
     <children>
-        <Pane prefHeight="500.0" prefWidth="820.0" style="-fx-background-color: #2c2c2c;">
+        <Pane prefHeight="500.0" prefWidth="820.0" style="-fx-background-color: #1B262C;">
             <children>
-                <Button alignment="CENTER" layoutX="206.0" layoutY="419.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="598.0" style="-fx-background-color: #32a889;" text="Start" textFill="#2c2c2c">
+                <Button alignment="CENTER" layoutX="206.0" layoutY="412.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="598.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="Start" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="32.0" />
+                        <Font name="Droid Sans Mono" size="24.0" />
                     </font>
                 </Button>
-                <ImageView fitHeight="335.0" fitWidth="598.0" layoutX="206.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
-                <Label alignment="CENTER" layoutX="214.0" layoutY="14.0" prefHeight="50.0" prefWidth="598.0" text="Welcome" textFill="#32a889">
+                <ImageView fitHeight="331.0" fitWidth="598.0" layoutX="206.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+                <Label alignment="CENTER" layoutX="215.0" layoutY="8.0" prefHeight="50.0" prefWidth="598.0" text="Welcome" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="32.0" />
+                        <Font name="Droid Sans Mono" size="28.0" />
                     </font>
                 </Label>
             </children></Pane>
-        <Pane prefHeight="500.0" prefWidth="194.0" style="-fx-background-color: #32a889;">
+        <Pane prefHeight="500.0" prefWidth="194.0" style="-fx-background-color: #1B262C;">
             <children>
-                <Pane prefHeight="75.0" prefWidth="199.0" style="-fx-background-color: #2c2c2c;">
-                    <children>
-                        <Label alignment="CENTER" layoutX="40.0" layoutY="13.0" prefHeight="28.0" prefWidth="120.0" text="MTools" textAlignment="CENTER" textFill="#32a889">
-                            <font>
-                                <Font name="Roboto Thin" size="36.0" />
-                            </font>
-                        </Label>
-                    </children>
-                </Pane>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="85.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #2c2c2c;" text="RandomName" textAlignment="CENTER" textFill="#32a889">
+                <Button alignment="CENTER" layoutX="26.0" layoutY="73.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="RandomName" textAlignment="CENTER" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="16.0" />
+                        <Font name="Droid Sans Mono" size="16.0" />
                     </font></Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="155.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #2c2c2c;" text="Calculator" textFill="#32a889">
+                <Button alignment="CENTER" layoutX="26.0" layoutY="143.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="Calculator" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="16.0" />
+                        <Font name="Droid Sans Mono" size="16.0" />
                     </font></Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="225.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #2c2c2c;" text="Mail" textFill="#32a889">
+                <Button alignment="CENTER" layoutX="26.0" layoutY="213.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="Mail" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="16.0" />
+                        <Font name="Droid Sans Mono" size="16.0" />
                     </font></Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="295.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #2c2c2c;" text="Watch" textFill="#32a889">
+                <Button alignment="CENTER" layoutX="26.0" layoutY="283.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="Watch" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="16.0" />
+                        <Font name="Droid Sans Mono" size="16.0" />
                     </font></Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="365.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #2c2c2c;" text="RRC" textFill="#32a889">
+                <Button alignment="CENTER" layoutX="26.0" layoutY="353.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="RRC" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="16.0" />
+                        <Font name="Droid Sans Mono" size="16.0" />
                     </font></Button>
-                <Button alignment="CENTER" layoutX="-4.0" layoutY="425.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="206.0" style="-fx-background-color: #2c2c2c;" text="Exit" textFill="#32a889">
+                <Button alignment="CENTER" layoutX="10.0" layoutY="413.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="174.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="Exit" textFill="#0f4c75">
                     <font>
-                        <Font name="Roboto Thin" size="36.0" />
+                        <Font name="Droid Sans Mono" size="24.0" />
                     </font></Button>
+                  <Label alignment="CENTER" layoutX="26.0" layoutY="8.0" prefHeight="50.0" prefWidth="142.0" text="MTools" textAlignment="CENTER" textFill="#0f4c75">
+                      <font>
+                          <Font name="Droid Sans Mono" size="28.0" />
+                      </font>
+                  </Label>
             </children>
         </Pane>
     </children>
