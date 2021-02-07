@@ -21,7 +21,7 @@ public class LauncherController implements Initializable {
     Button startButton, randomNameButton, calculatorButton, mailButton, watchButton, RRCButton, exitButton;
 
     @FXML
-    ImageView previewImage;
+    ImageView previewImage, launcherImage, randomNameImage, calculatorImage, mailImage, watchImage, RRCImage;
 
     String selectedApplication;
 
@@ -86,30 +86,45 @@ public class LauncherController implements Initializable {
         selectedApplication = "RandomName";
         resetButtons();
         randomNameButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
+        resetImage();
+        randomNameImage.setVisible(true);
+        label.setText("Selected: RandomName");
     }
 
     public void clickCalculator() {
         selectedApplication = "Calculator";
         resetButtons();
         calculatorButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
+        resetImage();
+        calculatorImage.setVisible(true);
+        label.setText("Selected: Calculator");
     }
 
     public void clickMail() {
         selectedApplication = "Mail";
         resetButtons();
         mailButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
+        resetImage();
+        mailImage.setVisible(true);
+        label.setText("Selected: Mail");
     }
 
     public void clickWatch() {
         selectedApplication = "Watch";
         resetButtons();
         watchButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
+        resetImage();
+        watchImage.setVisible(true);
+        label.setText("Selected: Watch");
     }
 
     public void clickRRC() {
         selectedApplication = "RRC";
         resetButtons();
         RRCButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
+        resetImage();
+        RRCImage.setVisible(true);
+        label.setText("Selected: RRC");
     }
 
     public void exit() {
@@ -122,5 +137,14 @@ public class LauncherController implements Initializable {
         mailButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
         watchButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
         RRCButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
+    }
+
+    public void resetImage() {
+        launcherImage.setVisible(false);
+        randomNameImage.setVisible(false);
+        calculatorImage.setVisible(false);
+        mailImage.setVisible(false);
+        watchImage.setVisible(false);
+        RRCImage.setVisible(false);
     }
 }

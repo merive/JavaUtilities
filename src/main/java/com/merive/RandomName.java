@@ -20,7 +20,7 @@ public class RandomName extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("random_name.fxml"));
         primaryStage.setTitle("RandomName");
         primaryStage.getIcons().add(new Image(getClass().getResource("random_name_icon.png").toString()));
-        primaryStage.setScene(new Scene(root, 600, 185));
+        primaryStage.setScene(new Scene(root, 600, 200));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
