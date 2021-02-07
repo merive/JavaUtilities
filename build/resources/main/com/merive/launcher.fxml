@@ -22,7 +22,7 @@
         </ImageView>
         <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true">
-            <Image url="@settings.png"/>
+            <Image url="@launcher_icon.png"/>
         </ImageView>
         <ImageView fx:id="randomNameImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">
@@ -34,7 +34,7 @@
         </ImageView>
         <ImageView fx:id="mailImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">
-            <Image url="@email.png"/>
+            <Image url="@email_icon.png"/>
         </ImageView>
         <ImageView fx:id="watchImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">

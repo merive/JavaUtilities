@@ -51,10 +51,10 @@ public class LauncherController implements Initializable {
                         }
                     });
                     break;
-                case "Mail":
+                case "Email":
                     Platform.runLater(() -> {
                         try {
-                            new Mail().start(new Stage());
+                            new Email().start(new Stage());
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -101,12 +101,12 @@ public class LauncherController implements Initializable {
     }
 
     public void clickMail() {
-        selectedApplication = "Mail";
+        selectedApplication = "Email";
         resetButtons();
         mailButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
         resetImage();
         mailImage.setVisible(true);
-        label.setText("Selected: Mail");
+        label.setText("Selected: Email");
     }
 
     public void clickWatch() {

@@ -18,7 +18,7 @@ public class Launcher extends Application {
 
         stage.setTitle("MTools");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(getClass().getResource("settings.png").toString()));
+        stage.getIcons().add(new Image(getClass().getResource("launcher_icon.png").toString()));
         stage.show();
     }
 
