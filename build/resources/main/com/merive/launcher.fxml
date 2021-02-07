@@ -30,7 +30,7 @@
         </ImageView>
         <ImageView fx:id="calculatorImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">
-            <Image url="@calculator.png"/>
+            <Image url="@calculator_icon.png"/>
         </ImageView>
         <ImageView fx:id="mailImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">

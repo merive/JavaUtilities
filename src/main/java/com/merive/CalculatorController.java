@@ -2,183 +2,175 @@ package com.merive;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.Pane;
 
-import java.util.Arrays;
 
 public class CalculatorController {
 
-    public TextField ResBar;
-    public String OPERATOR = "";
-    public Pane pane;
-    public Pane startPane;
-    int num1, num2;
+    public TextField textField;
 
+    public String OPERATOR = "";
+    int num1;
+    int num2;
 
     @FXML
-    void pressClear() {
-        ResBar.setText("");
+    void clickClear() {
+        textField.setText("");
         OPERATOR = "";
     }
 
     @FXML
-    void press0() {
+    void click0() {
         checkError();
-        ResBar.setText(ResBar.getText() + "0");
+        textField.setText(textField.getText() + "0");
     }
 
     @FXML
-    void press1() {
+    void click1() {
         checkError();
-        ResBar.setText(ResBar.getText() + "1");
+        textField.setText(textField.getText() + "1");
     }
 
     @FXML
-    void press2() {
+    void click2() {
         checkError();
-        ResBar.setText(ResBar.getText() + "2");
+        textField.setText(textField.getText() + "2");
     }
 
     @FXML
-    void press3() {
+    void click3() {
         checkError();
-        ResBar.setText(ResBar.getText() + "3");
+        textField.setText(textField.getText() + "3");
     }
 
     @FXML
-    void press4() {
+    void click4() {
         checkError();
-        ResBar.setText(ResBar.getText() + "4");
+        textField.setText(textField.getText() + "4");
     }
 
     @FXML
-    void press5() {
+    void click5() {
         checkError();
-        ResBar.setText(ResBar.getText() + "5");
+        textField.setText(textField.getText() + "5");
     }
 
     @FXML
-    void press6() {
+    void click6() {
         checkError();
-        ResBar.setText(ResBar.getText() + "6");
+        textField.setText(textField.getText() + "6");
     }
 
     @FXML
-    void press7() {
+    void click7() {
         checkError();
-        ResBar.setText(ResBar.getText() + "7");
+        textField.setText(textField.getText() + "7");
     }
 
     @FXML
-    void press8() {
+    void click8() {
         checkError();
-        ResBar.setText(ResBar.getText() + "8");
+        textField.setText(textField.getText() + "8");
     }
 
     @FXML
-    void press9() {
+    void click9() {
         checkError();
-        ResBar.setText(ResBar.getText() + "9");
+        textField.setText(textField.getText() + "9");
     }
 
     @FXML
-    void pressPlus() {
+    void clickPlus() {
         checkError();
         if (OPERATOR.equals("")) {
-            ResBar.setText(ResBar.getText() + "+");
+            textField.setText(textField.getText() + "+");
             OPERATOR = "+";
         } else {
-            getRes();
+            getResult();
         }
     }
 
     @FXML
-    void pressMinus() {
+    void clickMinus() {
         checkError();
         if (OPERATOR.equals("")) {
-            ResBar.setText(ResBar.getText() + "-");
+            textField.setText(textField.getText() + "-");
             OPERATOR = "-";
         } else {
-            getRes();
+            getResult();
         }
     }
 
     @FXML
-    void pressMulti() {
+    void clickMulti() {
         checkError();
         if (OPERATOR.equals("")) {
-            ResBar.setText(ResBar.getText() + "*");
+            textField.setText(textField.getText() + "*");
             OPERATOR = "*";
         } else {
-            getRes();
+            getResult();
         }
     }
 
     @FXML
-    void pressDivision() {
+    void clickDivision() {
         checkError();
         if (OPERATOR.equals("")) {
-            ResBar.setText(ResBar.getText() + "/");
+            textField.setText(textField.getText() + "/");
             OPERATOR = "/";
         } else {
-            getRes();
+            getResult();
         }
     }
 
     @FXML
-    void pressEqually() {
+    void clickEqually() {
         checkError();
         if (OPERATOR.equals("")) {
-            ResBar.setText(Arrays.toString(ResBar.getText().split(OPERATOR)));
+            textField.setText(textField.getText());
         } else {
-            getRes();
+            getResult();
         }
     }
 
     public void checkError() {
-        if (ResBar.getText().equals("Error")) {
-            ResBar.setText("");
+        if (textField.getText().equals("Error")) {
+            textField.setText("");
             OPERATOR = "";
         }
     }
 
-    public void getRes() {
-        String[] numbers = ResBar.getText().split(String.format("\\%s", OPERATOR));
+    public void getResult() {
+        String[] numbers = textField.getText().split(String.format("\\%s", OPERATOR));
         try {
             num1 = Integer.parseInt(numbers[0]);
             num2 = Integer.parseInt(numbers[1]);
         } catch (Exception e) {
-            ResBar.setText("Error");
+            textField.setText("Error");
             OPERATOR = "";
         }
         switch (OPERATOR) {
             case "+":
-                ResBar.setText(Integer.toString(num1 + num2));
+                textField.setText(String.valueOf(num1 + num2));
                 OPERATOR = "";
                 break;
             case "-":
-                ResBar.setText(Integer.toString(num1 - num2));
+                textField.setText(String.valueOf(num1 - num2));
                 OPERATOR = "";
                 break;
             case "*":
-                ResBar.setText(Integer.toString(num1 * num2));
+                textField.setText(String.valueOf(num1 * num2));
                 OPERATOR = "";
                 break;
             case "/":
                 try {
-                    ResBar.setText(Integer.toString(num1 / num2));
+                    textField.setText(String.valueOf(num1 / num2));
                     OPERATOR = "";
                     break;
                 } catch (ArithmeticException exc) {
-                    ResBar.setText("Error");
+                    textField.setText("Error");
                     OPERATOR = "";
                     break;
                 }
         }
-    }
-
-    public void start() {
-        startPane.setVisible(false);
-        pane.setVisible(true);
     }
 }

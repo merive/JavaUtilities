@@ -1,75 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<GridPane xmlns:fx="http://javafx.com/fxml/1" alignment="center" hgap="10" onMouseClicked="#start" prefHeight="242.0"
-          prefWidth="216.0" styleClass="background" stylesheets="@CalculatorStyle.css"
-          vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
-          fx:controller="com.merive.CalculatorController">
-    <columnConstraints>
-        <ColumnConstraints/>
-    </columnConstraints>
-    <rowConstraints>
-        <RowConstraints/>
-    </rowConstraints>
-    <Pane fx:id="startPane" prefHeight="200.0" prefWidth="200.0">
-        <Label layoutX="63.0" layoutY="28.0" text="Calculator">
-            <font>
-                <Font name="Verdana" size="18.0"/>
-            </font>
-        </Label>
-        <Label layoutX="63.0" layoutY="197.0" text="Click to start">
-            <font>
-                <Font name="Verdana" size="14.0"/>
-            </font>
-        </Label>
-        <ImageView fitHeight="137.0" fitWidth="128.0" layoutX="44.0" layoutY="57.0" pickOnBounds="true"
-                   preserveRatio="true">
-            <Image url="@calculator.png"/>
-        </ImageView>
-    </Pane>
-    <Pane fx:id="pane" prefHeight="246.0" prefWidth="217.0" styleClass="background" stylesheets="@CalculatorStyle.css"
-          visible="false">
-        <Button id="num8" layoutX="59.0" layoutY="54.0" mnemonicParsing="false" onAction="#press8" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="8"/>
-        <Button id="num7" layoutX="7.0" layoutY="54.0" mnemonicParsing="false" onAction="#press7" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="7"/>
-        <Button id="num9" layoutX="111.0" layoutY="54.0" mnemonicParsing="false" onAction="#press9" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="9"/>
-        <Button id="butSum" layoutX="163.0" layoutY="54.0" mnemonicParsing="false" onAction="#pressPlus"
-                prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="+"/>
-        <Button id="num4" layoutX="7.0" layoutY="103.0" mnemonicParsing="false" onAction="#press4" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="4"/>
-        <Button id="num5" layoutX="59.0" layoutY="103.0" mnemonicParsing="false" onAction="#press5" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="5"/>
-        <Button id="num6" layoutX="111.0" layoutY="103.0" mnemonicParsing="false" onAction="#press6" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="6"/>
-        <Button id="butMinus" layoutX="163.0" layoutY="103.0" mnemonicParsing="false" onAction="#pressMinus"
-                prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="-"/>
-        <Button id="num1" layoutX="7.0" layoutY="152.0" mnemonicParsing="false" onAction="#press1" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="1"/>
-        <Button id="num2" layoutX="59.0" layoutY="152.0" mnemonicParsing="false" onAction="#press2" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="2"/>
-        <Button id="num3" layoutX="111.0" layoutY="152.0" mnemonicParsing="false" onAction="#press3" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="3"/>
-        <Button id="butMulti" layoutX="163.0" layoutY="152.0" mnemonicParsing="false" onAction="#pressMulti"
-                prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="*"/>
-        <Button id="butClear" layoutX="7.0" layoutY="197.0" mnemonicParsing="false" onAction="#pressClear"
-                prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="C"/>
-        <Button id="num0" layoutX="59.0" layoutY="197.0" mnemonicParsing="false" onAction="#press0" prefHeight="39.0"
-                prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="0"/>
-        <Button id="butEqually" layoutX="111.0" layoutY="197.0" mnemonicParsing="false" onAction="#pressEqually"
-                prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="="/>
-        <Button id="butDivision" layoutX="163.0" layoutY="197.0" mnemonicParsing="false" onAction="#pressDivision"
-                prefHeight="39.0" prefWidth="45.0" styleClass="textfield" stylesheets="@CalculatorStyle.css" text="/"/>
-        <TextField id="ResBar" fx:id="ResBar" layoutX="5.0" layoutY="7.0" prefHeight="39.0" prefWidth="206.0"
-                   styleClass="textfield" stylesheets="@CalculatorStyle.css">
-            <font>
-                <Font name="Verdana" size="16.0"/>
-            </font>
-        </TextField>
-    </Pane>
-</GridPane>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="340.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.CalculatorController">
+   <Pane prefHeight="340.0" prefWidth="300.0" style="-fx-background-color: #1B262C;">
+      <TextField fx:id="textField" accessibleRole="TEXT" alignment="CENTER_RIGHT" editable="false" layoutX="19.0" layoutY="16.0" prefHeight="50.0" prefWidth="262.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="88.0" layoutY="279.0" mnemonicParsing="false" onAction="#clickClear" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="C" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+
+      <Button layoutX="21.0" layoutY="84.0" mnemonicParsing="false" onAction="#click7" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="7" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="88.0" layoutY="84.0" mnemonicParsing="false" onAction="#click8" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="8" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="157.0" layoutY="84.0" mnemonicParsing="false" onAction="#click9" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="9" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="84.0" mnemonicParsing="false" onAction="#clickDivision" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="/" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+
+      <Button layoutX="21.0" layoutY="149.0" mnemonicParsing="false" onAction="#click4" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="4" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="88.0" layoutY="149.0" mnemonicParsing="false" onAction="#click5" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="5" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="157.0" layoutY="149.0" mnemonicParsing="false" onAction="#click6" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="6" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="149.0" mnemonicParsing="false" onAction="#clickMulti" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="*" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+
+      <Button layoutX="21.0" layoutY="214.0" mnemonicParsing="false" onAction="#click1" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="1" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="88.0" layoutY="214.0" mnemonicParsing="false" onAction="#click2" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="2" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="157.0" layoutY="214.0" mnemonicParsing="false" onAction="#click3" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="3" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="214.0" mnemonicParsing="false" onAction="#clickMinus" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="-" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+
+      <Button layoutX="21.0" layoutY="279.0" mnemonicParsing="false" onAction="#click0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="0" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="157.0" layoutY="279.0" mnemonicParsing="false" onAction="#clickEqually" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="=" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="279.0" mnemonicParsing="false" onAction="#clickPlus" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #BBE1FA; -fx-border-color: #0f4c75; -fx-border-width: 3px;" text="+" textFill="#1b262c">
+         <font>
+            <Font name="Droid Sans" size="14.0" />
+         </font>
+      </Button>
+   </Pane>
+</AnchorPane>

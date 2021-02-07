@@ -17,10 +17,10 @@ public class Calculator extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Calculator.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("calculator.fxml"));
         primaryStage.setTitle("Calculator");
-        primaryStage.getIcons().add(new Image(getClass().getResource("calculator.png").toString()));
-        primaryStage.setScene(new Scene(root, 216, 242));
+        primaryStage.getIcons().add(new Image(getClass().getResource("calculator_icon.png").toString()));
+        primaryStage.setScene(new Scene(root, 300, 340));
         primaryStage.setResizable(false);
         primaryStage.show();
     }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -27,19 +26,5 @@
             <Font name="Droid Sans Mono" size="16.0" />
          </font>
       </Button>
-   </Pane>
-   <Pane fx:id="splash" onMouseClicked="#clickToStart" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #1b262c;">
-      <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="238.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@random_name_icon.png" />
-      </ImageView>
-      <Label alignment="CENTER" layoutX="16.0" layoutY="171.0" prefHeight="15.0" prefWidth="568.0" text="Click to Start" textFill="#bbe1fa">
-         <font>
-            <Font name="Droid Sans" size="16.0" />
-         </font></Label>
-      <Label alignment="CENTER" layoutX="16.0" layoutY="8.0" prefHeight="20.0" prefWidth="568.0" text="RandomName" textFill="#bbe1fa">
-         <font>
-            <Font name="Droid Sans" size="16.0" />
-         </font>
-      </Label>
    </Pane>
 </AnchorPane>
