@@ -1,17 +1,17 @@
-com/merive/WatchController.java
- com.merive.WatchController
+com/merive/RandomName.java
+ com.merive.RandomName
 com/merive/Decrypt.java
  com.merive.Decrypt
 com/merive/RandomNameController.java
  com.merive.RandomNameController
-com/merive/LauncherController.java
- com.merive.LauncherController
+com/merive/EmailController.java
+ com.merive.EmailController
 com/merive/Calculator.java
  com.merive.Calculator
 com/merive/Encrypt.java
  com.merive.Encrypt
-com/merive/RRCController.java
- com.merive.RRCController
+com/merive/CalculatorController.java
+ com.merive.CalculatorController
 com/merive/SendEmail.java
  com.merive.SendEmail
 com/merive/Launcher.java
@@ -20,13 +20,13 @@ com/merive/RRC.java
  com.merive.RRC
 com/merive/Chipper.java
  com.merive.Chipper
-com/merive/Watch.java
- com.merive.Watch
-com/merive/RandomName.java
- com.merive.RandomName
-com/merive/CalculatorController.java
- com.merive.CalculatorController
+com/merive/RRCController.java
+ com.merive.RRCController
 com/merive/Email.java
  com.merive.Email
-com/merive/EmailController.java
- com.merive.EmailController
+com/merive/LauncherController.java
+ com.merive.LauncherController
+com/merive/Time.java
+ com.merive.Time
+com/merive/TimeController.java
+ com.merive.TimeController

@@ -63,7 +63,7 @@ public class LauncherController implements Initializable {
                 case "Watch":
                     Platform.runLater(() -> {
                         try {
-                            new Watch().start(new Stage());
+                            new Time().start(new Stage());
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

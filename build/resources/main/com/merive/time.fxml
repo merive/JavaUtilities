@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="125.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.TimeController">
+    <Pane onMouseClicked="#setColor" prefHeight="125.0" prefWidth="600.0" style="-fx-background-color: #1B262C;">
+      <children>
+         <Label fx:id="time" alignment="CENTER" layoutY="48.0" prefHeight="21.0" prefWidth="600.0" textFill="WHITE">
+            <font>
+               <Font name="Droid Sans Mono" size="24.0" />
+            </font>
+         </Label>
+      </children></Pane>
+</AnchorPane>

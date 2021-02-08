@@ -38,7 +38,7 @@
         </ImageView>
         <ImageView fx:id="watchImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">
-            <Image url="@clock.png"/>
+            <Image url="@time_icon.png"/>
         </ImageView>
         <ImageView fx:id="RRCImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true"
                    preserveRatio="true" visible="false">
