@@ -15,9 +15,9 @@ public class Time extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("time.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/time.fxml"));
         primaryStage.setTitle("Time");
-        primaryStage.getIcons().add(new Image(getClass().getResource("time_icon.png").toString()));
+        primaryStage.getIcons().add(new Image(getClass().getResource("icons/time_icon.png").toString()));
         primaryStage.setScene(new Scene(root, 600, 125));
         primaryStage.setResizable(false);
         primaryStage.show();

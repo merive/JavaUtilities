@@ -7,7 +7,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.RRCController">
    <Pane layoutY="1.0" prefHeight="350.0" prefWidth="600.0">
       <Pane layoutY="-4.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #1B262C;">
-         <TextArea fx:id="message" layoutX="18.0" layoutY="20.0" prefHeight="268.0" prefWidth="564.0" promptText="Write text" style="-fx-border-color: #3282b8;" stylesheets="@rrc.css" wrapText="true" />
+         <TextArea fx:id="message" layoutX="18.0" layoutY="20.0" prefHeight="268.0" prefWidth="564.0" promptText="Write text" style="-fx-border-color: #3282b8;" stylesheets="@../css/rrc.css" wrapText="true" />
          <TextField fx:id="result" editable="false" layoutX="18.0" layoutY="303.0" prefHeight="27.0" prefWidth="564.0" promptText="..." style="-fx-border-color: #3282b8; -fx-background-color: #BBE1FA;">
             <font>
                <Font size="15.0" />
@@ -21,7 +21,7 @@
             <Font name="Droid Sans" size="24.0" />
          </font>
       </Label>
-      <Spinner fx:id="key" layoutX="180.0" layoutY="18.0" prefHeight="25.0" prefWidth="120.0" style="-fx-border-color: #3282b8; color: #1b262c;" stylesheets="@rrc.css">
+      <Spinner fx:id="key" layoutX="180.0" layoutY="18.0" prefHeight="25.0" prefWidth="120.0" style="-fx-border-color: #3282b8; color: #1b262c;" stylesheets="@../css/rrc.css">
          <valueFactory>
             <SpinnerValueFactory.IntegerSpinnerValueFactory max="2147483646" min="0" />
          </valueFactory>

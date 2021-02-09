@@ -12,13 +12,13 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("launcher.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/launcher.fxml"));
 
         Scene scene = new Scene(root);
 
         stage.setTitle("MTools");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(getClass().getResource("launcher_icon.png").toString()));
+        stage.getIcons().add(new Image(getClass().getResource("icons/launcher_icon.png").toString()));
         stage.show();
     }
 

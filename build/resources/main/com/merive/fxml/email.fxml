@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.merive.EmailController">
    <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1B262C;">
-      <TextArea fx:id="message" layoutX="22.0" layoutY="119.0" prefHeight="231.0" prefWidth="557.0" styleClass="text-area" stylesheets="@email.css" wrapText="true">
+      <TextArea fx:id="message" layoutX="22.0" layoutY="119.0" prefHeight="231.0" prefWidth="557.0" styleClass="text-area" stylesheets="@../css/email.css" wrapText="true">
          <font>
             <Font name="Droid Sans" size="14.0" />
          </font></TextArea>

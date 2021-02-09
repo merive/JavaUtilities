@@ -17,9 +17,9 @@ public class RRC extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("RRC.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/rrc.fxml"));
         primaryStage.setTitle("RRC");
-        primaryStage.getIcons().add(new Image(getClass().getResource("rrc_icon.png").toString()));
+        primaryStage.getIcons().add(new Image(getClass().getResource("icons/rrc_icon.png").toString()));
         primaryStage.setScene(new Scene(root, 600, 405));
         primaryStage.setResizable(false);
         primaryStage.show();

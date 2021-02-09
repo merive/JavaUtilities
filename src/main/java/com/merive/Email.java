@@ -17,9 +17,9 @@ public class Email extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("email.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("fxml/email.fxml"));
         primaryStage.setTitle("Email");
-        primaryStage.getIcons().add(new Image(getClass().getResource("email_icon.png").toString()));
+        primaryStage.getIcons().add(new Image(getClass().getResource("icons/email_icon.png").toString()));
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.setResizable(false);
         primaryStage.show();
