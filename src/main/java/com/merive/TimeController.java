@@ -4,12 +4,10 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.paint.Color;
 
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -28,12 +26,6 @@ public class TimeController implements Initializable {
             String nowFormatted = dateTimeFormatter.format(now);
             Platform.runLater(() -> time.setText(nowFormatted));
         }, 0, 1, TimeUnit.SECONDS);
-    }
-
-    public void setColor() {
-        Color[] colors = {Color.GRAY, Color.BLUE, Color.GREEN, Color.CYAN,
-                Color.MAGENTA, Color.RED, Color.WHITE, Color.PINK, Color.YELLOW, Color.ORANGE};
-        time.setTextFill(colors[new Random().nextInt(colors.length - 1)]);
     }
 
     @Override
