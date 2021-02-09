@@ -16,17 +16,17 @@ com/merive/SendEmail.java
  com.merive.SendEmail
 com/merive/Launcher.java
  com.merive.Launcher
-com/merive/RRC.java
- com.merive.RRC
+com/merive/TimeController.java
+ com.merive.TimeController
 com/merive/Chipper.java
  com.merive.Chipper
 com/merive/RRCController.java
  com.merive.RRCController
 com/merive/Email.java
  com.merive.Email
-com/merive/LauncherController.java
- com.merive.LauncherController
 com/merive/Time.java
  com.merive.Time
-com/merive/TimeController.java
- com.merive.TimeController
+com/merive/RRC.java
+ com.merive.RRC
+com/merive/LauncherController.java
+ com.merive.LauncherController

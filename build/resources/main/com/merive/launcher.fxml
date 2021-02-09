@@ -29,7 +29,7 @@
             <Image url="@time_icon.png" />
         </ImageView>
         <ImageView fx:id="RRCImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@key.png" />
+            <Image url="@rrc_icon.png" />
         </ImageView>
         <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="14.0" prefHeight="50.0" prefWidth="598.0" text="Welcome" textFill="#0f4c75" underline="true">
             <font>
