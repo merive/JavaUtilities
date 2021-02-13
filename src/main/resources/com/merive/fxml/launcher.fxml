@@ -16,8 +16,8 @@
         <ImageView fx:id="launcherImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@../icons/launcher_icon.png" />
         </ImageView>
-        <ImageView fx:id="randomNameImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
-            <Image url="@../icons/random_name_icon.png" />
+        <ImageView fx:id="noteImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Image url="@../icons/note_icon.png" />
         </ImageView>
         <ImageView fx:id="calculatorImage" fitHeight="200.0" fitWidth="200.0" layoutX="400.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true" visible="false">
             <Image url="@../icons/calculator_icon.png" />
@@ -38,7 +38,7 @@
         </Label>
     </Pane>
     <Pane prefHeight="500.0" prefWidth="194.0" style="-fx-background-color: #1B262C;">
-        <Button fx:id="randomNameButton" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="68.0" mnemonicParsing="false" onAction="#clickRandomName" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;" text="RandomName" textAlignment="CENTER" textFill="#0f4c75" underline="true">
+        <Button fx:id="noteButton" alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="68.0" mnemonicParsing="false" onAction="#clickNote" prefHeight="50.0" prefWidth="142.0" style="-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;" text="Note" textAlignment="CENTER" textFill="#0f4c75" underline="true">
             <font>
                 <Font name="Droid Sans Mono" size="16.0" />
             </font>

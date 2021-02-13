@@ -12,24 +12,23 @@ public class EmailController {
     public Alert alert;
 
     public void send() {
-        if (!login.getText().equals("")) {
-            password.getText();
-            if (!to.getText().equals("")) {
-                SendEmail se = new SendEmail();
-                try {
+        try {
+            if (!login.getText().equals("")) {
+                password.getText();
+                if (!to.getText().equals("")) {
+                    Sender se = new Sender();
                     se.send(login.getText(), password.getText(), to.getText(),
                             title.getText(), message.getText());
-                } catch (MessagingException exc) {
-                    getAlert("Result: Error");
+                    getAlert("Result: OK");
+                } else {
+                    getAlert("Result: Write To.");
                 }
-                getAlert("Result: OK");
             } else {
-                getAlert("Result: Write To.");
+                getAlert("Result: Write you email.");
             }
-        } else {
-            getAlert("Result: Write you email.");
+        } catch (MessagingException me) {
+            getAlert("Result: Email or Password not accepted.");
         }
-        getAlert("Result: Email or Password not accepted.");
     }
 
     public void getAlert(String res) {

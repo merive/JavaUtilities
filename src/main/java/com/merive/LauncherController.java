@@ -18,10 +18,10 @@ public class LauncherController implements Initializable {
     Label label;
 
     @FXML
-    Button startButton, randomNameButton, calculatorButton, mailButton, watchButton, RRCButton, exitButton;
+    Button startButton, noteButton, calculatorButton, mailButton, watchButton, RRCButton, exitButton;
 
     @FXML
-    ImageView launcherImage, randomNameImage, calculatorImage, mailImage, watchImage, RRCImage;
+    ImageView launcherImage, noteImage, calculatorImage, mailImage, watchImage, RRCImage;
 
     String selectedApplication;
 
@@ -33,10 +33,10 @@ public class LauncherController implements Initializable {
     public void clickStartButton() {
         if (!selectedApplication.equals("")) {
             switch (selectedApplication) {
-                case "RandomName":
+                case "Note":
                     Platform.runLater(() -> {
                         try {
-                            new RandomName().start(new Stage());
+                            new Note().start(new Stage());
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -82,13 +82,13 @@ public class LauncherController implements Initializable {
         }
     }
 
-    public void clickRandomName() {
-        selectedApplication = "RandomName";
+    public void clickNote() {
+        selectedApplication = "Note";
         resetButtons();
-        randomNameButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
+        noteButton.setStyle("-fx-background-color: #3282b8; -fx-border-color: #bbe1fa; -fx-border-width: 4px;");
         resetImage();
-        randomNameImage.setVisible(true);
-        label.setText("Selected: RandomName");
+        noteImage.setVisible(true);
+        label.setText("Selected: Note");
     }
 
     public void clickCalculator() {
@@ -132,7 +132,7 @@ public class LauncherController implements Initializable {
     }
 
     public void resetButtons() {
-        randomNameButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
+        noteButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
         calculatorButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
         mailButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
         watchButton.setStyle("-fx-background-color: #bbe1fa; -fx-border-color: #0f4c75; -fx-border-width: 4px;");
@@ -141,7 +141,7 @@ public class LauncherController implements Initializable {
 
     public void resetImage() {
         launcherImage.setVisible(false);
-        randomNameImage.setVisible(false);
+        noteImage.setVisible(false);
         calculatorImage.setVisible(false);
         mailImage.setVisible(false);
         watchImage.setVisible(false);

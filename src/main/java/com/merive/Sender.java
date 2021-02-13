@@ -8,7 +8,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
-class SendEmail {
+class Sender {
     public void send(String from, String password, String to, String title, String mes) throws MessagingException {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
