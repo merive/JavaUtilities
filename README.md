@@ -7,7 +7,7 @@ If you have any suggestions, write me on [Twitter](https://twitter.com/merive_).
 
 ____
 #### _Utility List:_
-* _RandomName:_ Utility for selecting a name (_JavaFX_),
+* _Note:_ Simple text editor (_JavaFX_),
 * _Calculator:_ Simple calculator (_JavaFX_),
 * _Email:_ Spam utility (_JavaFX + JavaMail_),
 * _Time:_ Updating clock (_JavaFX_),
