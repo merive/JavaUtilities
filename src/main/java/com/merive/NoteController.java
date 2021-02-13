@@ -36,7 +36,7 @@ public class NoteController {
 
     public void setPath() {
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Upload File Path");
+        fileChooser.setTitle("Select file");
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("ALL FILES", "*.*"),
                 new FileChooser.ExtensionFilter("ZIP", "*.zip"),
