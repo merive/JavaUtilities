@@ -47,7 +47,6 @@ public class NoteController {
 
 
         File file = fileChooser.showOpenDialog(pane.getScene().getWindow());
-
         if (file != null)
             path = file.getPath();
     }
@@ -58,5 +57,10 @@ public class NoteController {
         bw.write(text.getText());
         bw.flush();
         bw.close();
+    }
+
+    public void close() {
+        path = "";
+        text.setText("");
     }
 }
